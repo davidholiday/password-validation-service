@@ -1,4 +1,4 @@
-package com.davidholiday.charter.interview.cdvr.password_validation.validators.components;
+package com.davidholiday.charter.interview.cdvr.password_validation.components;
 
 
 import com.davidholiday.charter.interview.cdvr.password_validation.util.Pair;
@@ -6,6 +6,9 @@ import com.davidholiday.charter.interview.cdvr.password_validation.util.Pair;
 import java.util.List;
 
 
+/**
+ * base for all PasswordValidatorDecorators
+ */
 public abstract class PasswordValidatorComponentDecorator implements PasswordValidatorComponent {
 
     protected final PasswordValidatorComponent passwordValidator;

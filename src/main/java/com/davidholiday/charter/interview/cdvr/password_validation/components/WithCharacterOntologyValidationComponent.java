@@ -1,4 +1,4 @@
-package com.davidholiday.charter.interview.cdvr.password_validation.validators.components;
+package com.davidholiday.charter.interview.cdvr.password_validation.components;
 
 import com.davidholiday.charter.interview.cdvr.password_validation.util.Pair;
 
@@ -7,6 +7,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
+/**
+ * PasswordValidatorDecorator that adds checking for valid/invalid characters.
+ */
 public class WithCharacterOntologyValidationComponent extends PasswordValidatorComponentDecorator {
 
     public static final String VALIDATOR_CRITERION =
@@ -18,6 +22,12 @@ public class WithCharacterOntologyValidationComponent extends PasswordValidatorC
         super(passwordValidator);
     }
 
+    /**
+     * tells you whether or not the supplied password has invalid characters
+     *
+     * @param password the password to be validated
+     * @return boolean indicating pass/fail of validation
+     */
     public List<Pair<String, Boolean>> isPasswordValid(String password) {
         boolean isValid = password.matches(REGEX);
         Pair<String, Boolean> resultPair = new Pair<>(VALIDATOR_CRITERION, isValid);

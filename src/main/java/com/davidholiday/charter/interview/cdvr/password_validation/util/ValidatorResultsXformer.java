@@ -7,8 +7,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * used by ValidatorServiceController to transform the results from the validators into something friendlier to
+ * RESTful exchanges
+ */
 public class ValidatorResultsXformer {
 
+    /**
+     * transforms the results from password validation into a JSON string
+     *
+     * @param validatorResults
+     * @return
+     */
     public static String xformValidatorResultsToJsonString(
             Pair<Boolean, List<Pair<String, Boolean>>> validatorResults) {
 

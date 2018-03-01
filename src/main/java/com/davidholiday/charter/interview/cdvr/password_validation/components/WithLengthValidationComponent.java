@@ -1,4 +1,4 @@
-package com.davidholiday.charter.interview.cdvr.password_validation.validators.components;
+package com.davidholiday.charter.interview.cdvr.password_validation.components;
 
 import com.davidholiday.charter.interview.cdvr.password_validation.util.Pair;
 
@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
+/**
+ * PasswordValidatorComponentDecorator that adds validation check for min/max password length
+ */
 public class WithLengthValidationComponent extends PasswordValidatorComponentDecorator {
 
     public static final String VALIDATOR_CRITERION = "Must be between 5 and 12 characters in length.";
@@ -17,6 +21,12 @@ public class WithLengthValidationComponent extends PasswordValidatorComponentDec
         super(passwordValidator);
     }
 
+    /**
+     * tells you whether or not the supplied password is withing the min/max length bounds
+     *
+     * @param password the password to be validated
+     * @return boolean indicating pass/fail of validation
+     */
     public List<Pair<String, Boolean>> isPasswordValid(String password) {
 
         boolean isValid =

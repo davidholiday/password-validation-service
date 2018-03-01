@@ -1,18 +1,21 @@
-package com.davidholiday.charter.interview.cdvr.password_validation;
+package com.davidholiday.charter.interview.cdvr.password_validation.validators;
 
 
+import com.davidholiday.charter.interview.cdvr.password_validation.PasswordValidator;
+import com.davidholiday.charter.interview.cdvr.password_validation.bundles.PasswordValidatorBundle_Full;
 import com.davidholiday.charter.interview.cdvr.password_validation.util.Pair;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.PasswordValidator;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.bundles.PasswordValidatorBundle_Full;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.components.WithCharacterOntologyValidationComponent;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.components.WithCharacterSequenceValidationComponent;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.components.WithLengthValidationComponent;
+import com.davidholiday.charter.interview.cdvr.password_validation.components.WithCharacterOntologyValidationComponent;
+import com.davidholiday.charter.interview.cdvr.password_validation.components.WithCharacterSequenceValidationComponent;
+import com.davidholiday.charter.interview.cdvr.password_validation.components.WithLengthValidationComponent;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
 
 
+/**
+ * sanity checks the performance of the full password validation bundle
+ */
 public class PasswordValidatorBundleFullTest {
 
     private final PasswordValidatorBundle_Full fullValidatorBundle =

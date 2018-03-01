@@ -1,4 +1,4 @@
-package com.davidholiday.charter.interview.cdvr.password_validation.validators.components;
+package com.davidholiday.charter.interview.cdvr.password_validation.components;
 
 import com.davidholiday.charter.interview.cdvr.password_validation.util.Pair;
 
@@ -9,6 +9,10 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
+/**
+ * PasswordValidatorComponentDecorator that adds validation checks for subsequent repetition of sub-sequences
+ */
 public class WithCharacterSequenceValidationComponent extends PasswordValidatorComponentDecorator {
 
     public static final String VALIDATOR_CRITERION =
@@ -22,6 +26,12 @@ public class WithCharacterSequenceValidationComponent extends PasswordValidatorC
     }
 
 
+    /**
+     * tells you whether or not the supplied password has subsequent repeated sub-sequences
+     *
+     * @param password the password to be validated
+     * @return boolean indicating pass/fail of validation
+     */
     public List<Pair<String, Boolean>> isPasswordValid(String password) {
 
         // we're using 'find' and not 'match' because we want to know if there are substrings that meet the criteria

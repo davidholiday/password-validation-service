@@ -1,11 +1,14 @@
-package com.davidholiday.charter.interview.cdvr.password_validation;
+package com.davidholiday.charter.interview.cdvr.password_validation.validators;
 
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.PasswordValidator;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.bundles.PasswordValidatorBundle_CharacterOntologyOnly;
+import com.davidholiday.charter.interview.cdvr.password_validation.PasswordValidator;
+import com.davidholiday.charter.interview.cdvr.password_validation.bundles.PasswordValidatorBundle_CharacterOntologyOnly;
 import org.junit.Assert;
 import org.junit.Test;
 
 
+/**
+ * sanity checks the performance of the character ontology only validation bundle
+ */
 public class PasswordValidator_CharacterOntologyOnlyTest {
 
     private final PasswordValidatorBundle_CharacterOntologyOnly characterOntologyOnlyValidatorBundle =

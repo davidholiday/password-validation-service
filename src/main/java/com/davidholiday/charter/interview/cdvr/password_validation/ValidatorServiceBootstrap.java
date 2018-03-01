@@ -5,6 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
+/**
+ * boots up the applications
+ */
 @SpringBootApplication
 public class ValidatorServiceBootstrap {
 

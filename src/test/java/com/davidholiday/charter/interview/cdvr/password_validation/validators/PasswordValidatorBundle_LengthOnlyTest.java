@@ -1,11 +1,14 @@
-package com.davidholiday.charter.interview.cdvr.password_validation;
+package com.davidholiday.charter.interview.cdvr.password_validation.validators;
 
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.PasswordValidator;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.bundles.PasswordValidatorBundle_LengthOnly;
+import com.davidholiday.charter.interview.cdvr.password_validation.PasswordValidator;
+import com.davidholiday.charter.interview.cdvr.password_validation.bundles.PasswordValidatorBundle_LengthOnly;
 import org.junit.Assert;
 import org.junit.Test;
 
 
+/**
+ * sanity checks the performance of the length-only password validation bundle
+ */
 public class PasswordValidatorBundle_LengthOnlyTest {
 
     private final PasswordValidatorBundle_LengthOnly lengthOnlyValidatorBundle =

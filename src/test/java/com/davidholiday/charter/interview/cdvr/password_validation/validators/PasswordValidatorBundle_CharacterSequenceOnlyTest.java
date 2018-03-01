@@ -1,11 +1,14 @@
-package com.davidholiday.charter.interview.cdvr.password_validation;
+package com.davidholiday.charter.interview.cdvr.password_validation.validators;
 
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.PasswordValidator;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.bundles.PasswordValidatorBundle_CharacterSequenceOnly;
+import com.davidholiday.charter.interview.cdvr.password_validation.PasswordValidator;
+import com.davidholiday.charter.interview.cdvr.password_validation.bundles.PasswordValidatorBundle_CharacterSequenceOnly;
 import org.junit.Assert;
 import org.junit.Test;
 
 
+/**
+ * sanity checks the performance of the character sequence only validation bundle
+ */
 public class PasswordValidatorBundle_CharacterSequenceOnlyTest {
 
     private final PasswordValidatorBundle_CharacterSequenceOnly characterSequenceOnlyValidatorBundle =

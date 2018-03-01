@@ -1,7 +1,7 @@
-package com.davidholiday.charter.interview.cdvr.password_validation.validators.bundles;
+package com.davidholiday.charter.interview.cdvr.password_validation.bundles;
 
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.components.PasswordValidatorComponentDecorator;
-import com.davidholiday.charter.interview.cdvr.password_validation.validators.components.WithCharacterOntologyValidationComponent;
+import com.davidholiday.charter.interview.cdvr.password_validation.components.PasswordValidatorComponentDecorator;
+import com.davidholiday.charter.interview.cdvr.password_validation.components.WithCharacterOntologyValidationComponent;
 import org.springframework.stereotype.Component;
 
 
@@ -10,6 +10,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
+/**
+ * password validation bundle that applies only a character ontology validation
+ */
 @Component
 public class PasswordValidatorBundle_CharacterOntologyOnly extends PasswordValidatorBundle {
 

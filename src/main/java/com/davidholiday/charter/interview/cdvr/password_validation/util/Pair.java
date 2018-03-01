@@ -1,6 +1,12 @@
 package com.davidholiday.charter.interview.cdvr.password_validation.util;
 
 
+/**
+ * QAD tuple class because I didn't want to import commons for just this and I didn't realize JavaFX had one
+ *
+ * @param <L>
+ * @param <R>
+ */
 public class Pair<L,R> {
 
     private final L left;
