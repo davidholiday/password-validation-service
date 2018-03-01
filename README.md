@@ -2,7 +2,7 @@
 
 ## key features
 
-1. validates a given password and reports not only whether or not a given password passes validation checks but also a manifest of what validations were performed and the results of each.
+1. validates a given password and reports not only whether or not a given password passes validation but also a manifest of what validations were performed and the results of each.
 
 2. currently checks for the following:
 
