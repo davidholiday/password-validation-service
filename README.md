@@ -6,11 +6,11 @@
 
 2. currently checks for the following:
 
-    * Must consist of a mixture of lowercase letters and numerical digits only, with at least one of each.
+    * password must consist of a mixture of lowercase letters and numerical digits only, with at least one of each.
 
-    * Must be between 5 and 12 characters in length.
+    * password must be between 5 and 12 characters in length.
 
-    * Must not contain any sequence of characters immediately followed by the same sequence.
+    * password must not contain any sequence of characters immediately followed by the same sequence.
 
 3. can be configured to check for a different set of things by dependency-injecting a different validator bundle into the endpoint controller 
 
