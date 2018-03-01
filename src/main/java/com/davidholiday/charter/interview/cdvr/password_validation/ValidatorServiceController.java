@@ -2,6 +2,7 @@ package com.davidholiday.charter.interview.cdvr.password_validation;
 
 
 import com.davidholiday.charter.interview.cdvr.password_validation.util.Pair;
+import com.davidholiday.charter.interview.cdvr.password_validation.util.ValidatorResultsXformer;
 import com.davidholiday.charter.interview.cdvr.password_validation.validators.PasswordValidator;
 import com.davidholiday.charter.interview.cdvr.password_validation.validators.bundles.PasswordValidatorBundle;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,10 @@ public class ValidatorServiceController {
         Pair<Boolean, List<Pair<String, Boolean>>> isPasswordValidAndWhy =
                 passwordValidator.isPasswordValidAndWhy(password);
 
-        return "";
+        String isPasswordValidAndWhyAsJsonString =
+                ValidatorResultsXformer.xformValidatorResultsToJsonString(isPasswordValidAndWhy);
+
+        return isPasswordValidAndWhyAsJsonString;
     }
 
 }

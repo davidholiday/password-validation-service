@@ -13,7 +13,7 @@ public class ValidatorResultsXformer {
             Pair<Boolean, List<Pair<String, Boolean>>> validatorResults) {
 
         Map<String, String> validatorResultsAsMap = new HashMap<>();
-        validatorResultsAsMap.put("IS_PASSWORD_VALID", validatorResults.getLeft().toString());
+        validatorResultsAsMap.put("IS PASSWORD VALID", validatorResults.getLeft().toString());
 
         List<Pair<String, Boolean>> andWhyList = validatorResults.getRight();
         for (Pair<String, Boolean> componentResult : andWhyList) {
